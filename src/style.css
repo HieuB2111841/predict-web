@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #290619;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+}
+
+#result {
+    font-size: 1.2em;
+    font-weight: bold;
+}

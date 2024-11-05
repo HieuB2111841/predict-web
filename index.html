@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Sharing Prediction</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h2 class="text-center">Dự đoán số người thuê xe đạp</h2>
+        <p class="text-center text-muted">Nhập các thông tin dưới đây để dự đoán số người thuê</p>
+
+        <form id="predictionForm" class="my-4">
+            <div class="form-group">
+                <label for="date">Ngày </label>
+                <input type="date" name="date" id="date" class="form-control" required>
+            </div>
+
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="is-holiday">
+                <label for="is-holiday" class="form-check-label"> Ngày lễ </label>
+            </div>
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="is-workingday">
+                <label for="is-workingday" class="form-check-label"> Ngày làm việc </label>
+            </div>
+
+
+            <div class="form-group">
+                <label for="weathersit">Tình trạng thời tiết:</label>
+                <select id="weathersit" class="custom-select">
+                    <option value="1">Trời trong, Ít mây</option>
+                    <option value="2">Sương mù</option>
+                    <option value="3">Tuyết, Mưa, Bão, Mây rải rác</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="temp">Nhiệt độ </label>
+                <input type="number" class="form-control" id="temp" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="atemp">Nhiệt độ cảm giác </label>
+                <input type="number" class="form-control" id="atemp" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="humidity">Độ ẩm </label>
+                <input type="number" class="form-control" id="humidity" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label for="windspeed">Tốc độ gió </label>
+                <input type="number" class="form-control" id="windspeed" step="0.01" required>
+            </div>
+
+            <button type="button" onclick="predict()" class="btn btn-dark">Dự đoán</button>
+        </form>
+
+        <div id="result" class="alert alert-info text-center mt-4" style="display: none;"></div>
+    </div>
+
+    <script src="./src/main.js"></script>
+</body>
+</html>
