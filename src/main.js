@@ -52,6 +52,7 @@ async function getPrediction(features) {
         return data.prediction;
     } catch (error) {
         console.error("Có lỗi xảy ra:", error);
+        return 0;
     }
 }
 

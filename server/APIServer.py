@@ -4,12 +4,7 @@ import joblib
 
 
 app = Flask(__name__)
-CORS (
-    app, 
-    resources={r"/predict": {"origins": "http://127.0.0.1:5500"}}, 
-    methods=["POST"],
-    allow_headers=["Content-Type"]
-)
+CORS (app)
 
 # Tải mô hình
 model = joblib.load("model.joblib")
